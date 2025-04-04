@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-  border: 1px solid rgb(141, 140, 140);
+  border: 1px solid ${(props) => props.theme.corBorda};
   padding: 16px;
   border-radius: 10px;
   box-shadow: 0px 0px 6px rgba(102, 102, 102, 0.88);
-  background-color:rgba(255, 255, 255, 0.84);
+  background-color:${(props) => props.theme.corDeFundo};
 `;
 
 export const LinkBotao = styled.a `

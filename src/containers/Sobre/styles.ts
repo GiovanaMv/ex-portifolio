@@ -8,7 +8,12 @@ export const GithubSecao = styled.div`
   gap: 16px;
 
   img {
-    height: 170px;
+    height: 157px;
+
+    @media (max-width: 768px) {
+      height: auto;
+      width: 100%;
+  }
   }
 
   @media (max-width: 767px) {

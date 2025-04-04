@@ -3,7 +3,7 @@ import { P } from '../../components/Paragrafo/styles';
 
 export const Descricao = styled(P)`
   margin-top: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 `;
 
 export const BotaoTema = styled.button`
@@ -12,12 +12,8 @@ export const BotaoTema = styled.button`
   color: #eee;
   font-size: 12px;
   font-weight: bold;
-  background-color: orange;
+  background-color: ${(props) => props.theme.corDoBotao};
   cursor: pointer;
-
-  &:hover {
-    background-color: blue;
-  }
 `;
 
 export const SidebarContainer = styled.div`
@@ -26,4 +22,9 @@ export const SidebarContainer = styled.div`
   left: 0;
   padding: 20px;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+  margin-bottom:40px;
+  text-align: center;
+  }
 `;

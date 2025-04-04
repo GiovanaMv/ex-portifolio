@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components"
 
+import { Theme } from './themes/dark'
+
 export const EstiloGlobal = createGlobalStyle `
   * {
     margin:0;
@@ -12,18 +14,10 @@ export const EstiloGlobal = createGlobalStyle `
   body{
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(45deg,rgb(237, 255, 136),rgba(240, 139, 218, 0.5), rgb(161, 181, 238));
-    background-size: 200% 300%;
-    animation: gradientBG 8s ease infinite;
+    background-color: ${(props) => (props.theme as Theme).corDeFundo};
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 
     @media (max-width: 768px){

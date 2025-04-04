@@ -4,14 +4,8 @@ import { Props } from ".";
 
 export const P = styled.p<Props>`
   font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '14px')};
-  color: ${(props) => (props.tipo === 'principal' ? '#282a35' : '#949494')};
+  color: ${(props) => (props.tipo === 'principal' ? props.theme.corPrincipal : props.theme.corSecundaria)};
   line-height: 22px;
-  text-align: justify;
 
-  @media (max-width: 768px){
-    text-align: start;
-}
-  @media (min-width: 768px) and (max-width: 1023px) {
-    text-align: start;
-}
+
 `;
